@@ -1,0 +1,12 @@
+﻿@helper Currency(decimal ammount)
+{
+    if (ammount > 10000)
+    {
+            <b style="color:indianred">@ammount.ToString("c")</b>
+    }
+    else
+    {
+            @ammount.ToString()
+    }
+}
+

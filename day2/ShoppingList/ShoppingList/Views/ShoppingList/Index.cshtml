@@ -9,7 +9,7 @@
 
 
 @* Working old way *@
-@*<ul>
+<ul>
     @foreach (var customer in Model.Customers)
     {
         <li>
@@ -29,10 +29,10 @@
                         {
                             sum += customer.Cart[i].Price;
                         }
-                        <b>@string.Format("{0:C}", sum)</b>
+                        @Format.Currency(sum)
                     }
                 </li>
             </ul>
         </li>
     }
-</ul>*@
+</ul>
