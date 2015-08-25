@@ -1,0 +1,39 @@
+﻿@model MVCHelpers.Models.AddViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    @*<marquee>*@
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Num1)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Num1)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Num2)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Num2)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Total", "Total: ")
+                </td>
+                <td>
+                    @Html.DisplayTextFor(m => m.Sum)
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Add Numbers" />
+    @*</marquee>*@
+}
