@@ -1,0 +1,19 @@
+﻿@model DataGridMVC.Models.MovieIndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{ 
+    List<string> data = new List<string>();
+    data.Add("Jaws");
+    data.Add("Star Wars");
+    data.Add("King Kong");
+}
+
+<h2>Movies</h2>
+
+<table>
+    @Format.Data(data)
+</table>
+

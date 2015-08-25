@@ -1,0 +1,11 @@
+﻿@helper Data(IEnumerable<string> title)
+{
+    foreach (var item in title)
+    {
+        <tr style="border:5px dashed green">
+            <td>
+                @item.ToString()
+            </td>
+        </tr>
+    }
+}
