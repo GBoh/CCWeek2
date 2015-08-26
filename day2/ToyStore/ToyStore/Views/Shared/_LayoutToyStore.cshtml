@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Custom.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="background-color:#d9d9d9">
+            <h3>Home | Shop | About<img height="50" src="http://kevincarrollkatalyst.com/images/uploads/MITS_logo.png" class="pull-right"  style="padding-right:25px"/></h3> 
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+            <div class="col-md-3">
+                @RenderSection("rightSide", false)
+            </div>
+        </div>
+        <div class="row" style="background-color:salmon">
+            some copywrite information
+        </div>
+    </div>
+
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

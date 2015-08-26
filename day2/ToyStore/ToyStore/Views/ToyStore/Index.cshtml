@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ToyStore.Models.Image>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutToyStore.cshtml";
+}
+
+<h2>Toy Store</h2>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed justo risus. Maecenas erat massa, gravida eu ligula ut, laoreet molestie diam. Ut tempor diam sit amet urna tincidunt, et malesuada est euismod. Suspendisse pretium est eget orci condimentum blandit. Praesent sollicitudin ut odio et efficitur. Quisque fringilla sed enim nec sollicitudin. Integer nisi ante, venenatis quis neque vel, ultricies dictum sapien. Etiam vitae iaculis justo.
+</p>
+
+<p>
+    Etiam in volutpat ante. Nullam leo orci, scelerisque quis arcu non, mollis auctor eros. Sed placerat ex non nulla vestibulum vehicula. Etiam dolor tellus, scelerisque sed vulputate in, rhoncus a turpis. Vivamus volutpat fringilla hendrerit. Sed magna augue, posuere sit amet tellus lacinia, rutrum dapibus felis. Mauris mollis sem turpis, sit amet luctus tortor posuere nec. Cras id dolor rutrum, posuere ex ultricies, pharetra ligula. Sed rhoncus, augue vel elementum imperdiet, odio neque efficitur erat, convallis dignissim nibh enim ac purus. Aenean porta, purus vitae elementum bibendum, enim orci mollis libero, ut rutrum sapien risus a magna. Proin et ante et erat gravida condimentum. Maecenas nisl nulla, fringilla ut commodo in, mollis sed ligula. Proin dui purus, cursus nec consequat id, dignissim at felis.
+</p>
+
+@section rightSide{
+
+    @{
+        foreach (var image in Model)
+        {
+            <text>@Format.Image(image.ImageURL, image.ToyName)</text>
+        }
+    }
+}
